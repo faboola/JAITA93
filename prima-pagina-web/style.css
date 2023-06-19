@@ -1,0 +1,49 @@
+/* Questo è un commento in CSS */
+
+body {
+    background-color: #3b6591;
+    color:aliceblue;
+}
+
+h1 {
+    color:red;
+}
+
+h2 {
+    color:aquamarine;
+}
+
+p {
+    font-size:16px;
+}
+
+h2, p {
+    /*queste regole si applicano a DUE selettori: h2 e p*/
+}
+
+.intro {
+    font-size: 20px;
+}
+
+.evidenziato {
+    color:#0faf00;
+    font-weight: bold;
+}
+
+.centered {
+    text-align: center;
+}
+
+
+#conclusione {
+    color:green;
+}
+
+/* 
+I selettori hanno un livello diverso di specificità. Se ci sono regole
+che vanno in conflitto, i selettori più specifici vincono. 
+
+ID | CLASSE | TAG
+
+ID è il selettore più specifico.
+*/

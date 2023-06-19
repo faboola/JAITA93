@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="La descrizione della mia pagina web.">
+    <link rel="stylesheet" href="style.css">
     <title>La mia prima pagina web</title>
 </head>
 
@@ -12,7 +13,9 @@
     <!-- Questo è un commento -->
     <h1>Questa è la mia prima pagina web!</h1>
 
-    <p>Questo è un paragrafo. All'interno del paragrafo posso inserire del testo e comparirà all'interno del documento. </p>
+    <p>Salta tutto il testo e vai direttamente alla <a href="#conclusione">conclusione</a>.</p>
+
+    <p class="intro">Questo è un paragrafo. All'interno del paragrafo posso inserire del testo e comparirà all'interno del documento. </p>
     <p>Questo è un altro paragrafo. Appare sotto il primo paragrafo e si stacca un po'.</p>
     <p>Dentro un paragrafo (ma anche fuori dal paragrafo!) posso inserire altri elementi, ad esempio un link ad altre pagine.
     <br>
@@ -27,7 +30,10 @@
     <!-- Titolo di secondo livello -->
     <h2>Titolo di secondo livello H2</h2>
     
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates eveniet eos sapiente sit nam. Illo repudiandae nostrum neque incidunt inventore consectetur, voluptates deserunt perferendis sequi distinctio numquam vel, harum similique.</p>
+    <p class="intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates eveniet eos sapiente sit nam. Illo repudiandae nostrum neque incidunt inventore consectetur, voluptates deserunt perferendis sequi distinctio numquam vel, harum similique.</p>
+
+    <!-- HR: filetto orizzontale -->
+    <hr>
 
     <!-- UL: unordered list -->
     <!-- Per abbreviare con EMMET: ul>li*10 -->
@@ -36,17 +42,38 @@
         <!-- LI: list item - elemento della lista -->
         <li>Elemento lista</li>
         <li>Secondo elemento lista</li>
-        <li>Terzo elemento lista</li>
+        <li class="intro">Terzo elemento lista</li>
         <li>Quarto elemento lista</li>
         <li>Lorem, ipsum dolor.</li>
     </ul>
+    
+    
 
-
+    <!-- OL: Lista ordinata (numerata) -->
     <ol>
         <li>Lista numerata</li>
         <li>Secondo Elemento</li>
         <li>Terzo Elemento</li>
     </ol>
+
+    <!-- TAG per il testo: strong e em -->
+    <p>Lorem ipsum dolor sit amet <strong>consectetur</strong> adipisicing elit. Voluptatem id a dolorem amet culpa fuga ex porro, nostrum doloribus natus officiis alias nobis soluta nulla nesciunt inventore, incidunt dignissimos voluptatum quia atque corrupti, officia iste sed repudiandae. Iusto numquam delectus <a href="https://www.nytimes.com">asperiores</a> odit ipsam placeat minus ea quaerat commodi, vitae laborum? <em>Consequatur debitis enim ullam ipsa, porro maiores atque architecto sapiente, amet at nobis quisquam aspernatur.</em>
+    Culpa suscipit fuga eius ducimus enim sed fugit dolores dignissimos? Natus, <span class="evidenziato">dignissimos</span> quo porro autem ullam ad voluptate quam ipsa illo. Laboriosam tenetur earum dolorum, dolorem esse tempora quibusdam quia culpa! Odio sint laudantium facilis.</p>
+
+    <!-- SPAN è un contenitore in linea generico per il testo. -->
+
+    <!-- DIV è un contenitore generico senza valore semantico -->
+    <div class="intro centered">
+        <h2>Titolo dentro il div</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam unde sequi similique inventore a ad accusamus, porro eaque amet ut.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita velit distinctio sit eaque sint sequi omnis recusandae quibusdam. Harum ut doloremque recusandae ipsam rerum, sit, reiciendis aliquam voluptatem facere quo odio aperiam rem libero, id itaque nobis. Quos, animi fugit.</p>
+    </div>
+
+    <h2 id="conclusione">Conclusione</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vitae provident doloremque, quis deserunt sequi autem possimus, <span class="evidenziato">quibusdam excepturi consequuntur aliquam </span>deleniti perspiciatis velit nihil explicabo natus minima hic assumenda eveniet quisquam sed? Magni deleniti molestiae dignissimos neque odio perferendis tempore corporis natus itaque quam sunt numquam error exercitationem dicta, modi expedita rerum! Aliquid dolor maiores placeat voluptates recusandae et laudantium, deserunt in tenetur officia saepe expedita. Iste, et eos quis animi modi consequatur nostrum voluptate! Tempore, laboriosam debitis pariatur in neque est dolore explicabo nulla dolorum excepturi repellendus, recusandae unde soluta ea. Dolore id debitis explicabo tenetur sequi quam est? Nam, sed. Dolores, non animi? Aperiam, commodi. Dignissimos saepe assumenda, sequi fuga reiciendis cupiditate eveniet, ipsum itaque quia commodi, alias consequuntur architecto praesentium dolorum quae qui aliquam blanditiis laudantium perspiciatis optio quidem repellendus. Repudiandae totam, non deserunt id perspiciatis et quia, fuga laboriosam consequatur possimus ullam necessitatibus animi illum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut unde praesentium aperiam earum odit aliquid amet labore repudiandae nulla alias.</p>
 
 
 </body>
