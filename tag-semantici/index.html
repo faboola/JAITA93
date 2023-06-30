@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+        
+        <article>
+        
+            <header>
+                <h1>I tag semantici in HTML5</h1>
+                <p class="intro">In questo articolo parleremo dei principali tag semantici di HTML. </p>
+                <nav>
+                    <a href="#articleTag">Il tag ARTICLE</a>
+                    <a href="#headerTag">Il tag HEADER</a>
+                    <a href="#footerTag">Il tag FOOTER</a>
+                    <a href="#navTag">Il tag NAV</a>
+                </nav>
+            </header>
+            <p>I tag semantici sono "portatori di significato". H1 significa che quel testo specifico è il titolo di primo livello, cioè principale. In questa pagina quindi si parlerà di tag semantici in HTML5.</p>
+        
+            <h2>I principali tag semantici in HTML5</h2>
+        
+            <h3 id="articleTag">Il tag ARTICLE</h3>
+        
+            <p>Article serve per indicare un articolo, ad esempio su un sito web o su un blog. Dal punto di vista strutturale il tag "article" è uguale al generico "div", è un elemento blocco. Cambia però il significato. </p>
+        
+            <p>Il tag Article si può usare per:</p>
+            <ul>
+                <li>Articoli di giornale</li>
+                <li>Post sul blog</li>
+                <li>Post sui forum</li>
+                <li>Pagine di prodotto</li>
+            </ul>
+            <p>In generale il tag article indica un tipo di contenuto tipo "self contained", cioè che ha senso anche isolato dal contesto.</p>
+        
+            <h3 id="headerTag">Il tag header</h3>
+            <p>Header rappresenta un contenuto introduttivo per un intero sito o un singolo articolo. Si può usare per la parte di navigazione generale del sito, oppure per racchiudere l'introduzione di un articolo o di una pagina. Una singola pagina può avere più header.</p>
+            <h3 id="footerTag">Il tag FOOTER</h3>
+            <p>Il tag FOOTER indica il pié di pagina. Si usa per:</p>
+            <ul>
+                <li>Informazioni sull'autore</li>
+                <li>informazioni generiche sul sito</li>
+                <li>informazioni di contatto</li>
+                <li>link secondari</li>
+            </ul>
+            <h3 id="navTag">Il tag NAV</h3>
+            <p>Serve a contenere un menu di navigazione. Non tutti i link della pagina richiedono NAV: si usa solo per indicare i blocchi di navigazione/menu principali.</p>
+            <h3 id="mainTag">Il tag MAIN</h3>
+            <p>Si usa per indicare il blocco principale della pagina.</p>
+
+            <h3>I tag FIGURE e FIGCAPTION</h3>
+
+            <p>Si usano per indicare un'immagine (figure) e la relativa didascalia (figcaption).</p>
+
+            <figure>
+                <!-- il servizio source.unsplash.com fornisce un'immagine a caso. -->
+                <!-- devo specificare le dimensioni, e posso anche indicare un tema con
+                la sintassi ?keyword -->
+                <img src="https://source.unsplash.com/600x400?mountains+alps" alt="">
+
+                <figcaption>Foto delle alpi.</figcaption>
+
+            </figure>
+
+           
+        
+            <footer>
+                Questo articolo fa parte del corso JAITA93.<br>
+                Ultimo aggiornamento: <time>30-06-2023</time>
+            </footer>
+        
+        </article>
+    </main>
+
+</body>
+</html>
