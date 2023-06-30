@@ -1,0 +1,87 @@
+.fullHeight {
+    height: 100vh;
+
+    background: #1e0545;
+    color:#fff;
+}
+
+.pixels {
+    border: 1px solid #222;
+    /* border è una proprietà shorthand
+    spessore | stile | colore
+    equivale a questo:
+    border-style: solid;
+    border-width: 1px;
+    border-color: #222; */
+
+    background-color: #FFDD00;
+    width:900px;
+}
+
+.percent {
+    width:60%;
+    /*60% rispetto al genitore */
+
+    background-color: #62ba79;
+    border:1px solid #222;
+}
+
+.percentChild  {
+    width:50%;
+    /* sarà grande la metà del suo genitore (.percent) */
+    
+
+    background-color: #d78ccc;
+}
+
+
+.bigText {
+    font-size: 2rem;
+}
+
+.biggerText {
+    font-size: 8rem;
+}
+
+.smallText {
+    font-size: 0.5rem;
+}
+
+.margine  {
+    /*per i MARGINI:*/
+    /* margin-left:2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem; */
+
+    /* -------------------------------------------------------------------------- */
+    /*               oppure posso utilizzare la proprietà shorthand               */
+    /* -------------------------------------------------------------------------- */
+    
+    /* imposta uguale su tutti i lati */
+    /*   margin:2rem; */
+
+    /*per gestire due lati: */
+    margin:4rem 2rem;
+    /*il primo valore è il margine TOP+BOTTOM, il secondo valore è il margine LEFT+RIGHT*/
+    
+
+    background-color: #999;
+}
+
+.margineInterno {
+
+    padding:2rem;
+
+    background: #FFDD00;
+}
+
+.mainTitle {
+    font-size: 4rem;
+
+}
+
+.subtitle {
+    font-size: 0.5em;
+    /* font grande la metà esatta del genitore (.mainTitle) */
+}
