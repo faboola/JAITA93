@@ -1,0 +1,87 @@
+body {
+
+   /*elimino il margine di default del body */
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Vollkorn', serif;
+
+}
+
+
+
+h1, h2, h3 {
+    /* separando con la virgola due selettori applichiamo a entrambi le stesse regole */
+    font-family: 'Pathway Extreme',sans-serif;
+}
+
+h1 {
+    /*imposto la dimensione font SOLO per H1 */
+    font-size: 3.75rem;
+   /* se voglio aumentare lo spessore posso usare:
+   font-weight: 900;
+   /* lo spessore solitamente va da 100 a 900 (se supportato dal font)*/
+
+}
+
+h2 {
+    /*imposto la dimensione font SOLO per H2 */
+    font-size: 2rem;
+
+    scroll-margin-top: 2rem;
+    /*quando scrolla all'ID corrispondente lascia uno spazio di 2rem in alto */
+}
+
+/* 
+.firma {
+    font-style: italic;
+} */
+
+.articleFooter p {
+    /*tutti i paragrafi dentro l'elemento con classe .mainFooter */
+    font-style: italic;
+    text-align: right;
+}
+
+
+.wrapper {
+    /* width:1000px; */
+
+    width:75%;
+    
+    /* per centrare l'elemento imposto una larghezza e definisco i margini sinistro e destro come AUTO: */
+    margin:0 auto;
+
+    /*versione estesa: */
+    /* margin-top: 0;
+    margin-bottom: 0;
+    margin-left:auto;
+    margin-right:auto;
+     */
+    background-color: #eee;
+
+    padding:1rem;
+}
+
+img {
+
+    /*impostando una larghezza in percentuale l'immagine diventa fluida */
+    width: 100%;
+    height: auto;
+
+    /* ATTENZIONE: in questo modo tutte le immagini si allargheranno fino a occupare il 100% del loro contenitore. Da usare con cautela perché potremmo ottenere delle immagini sgranate! */
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                 STILE PER GLI ELEMENTI FIGURE E FIGCAPTION                 */
+/* -------------------------------------------------------------------------- */
+
+figure {
+    margin: 0;
+    background:#fff; /* posso abbreviare #ffffff in #fff; funziona per le coppie di cifre uguali */
+   padding: 1rem;
+   border:1px solid #aaa;
+}
+
+
