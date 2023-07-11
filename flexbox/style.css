@@ -62,6 +62,7 @@
 /* -------------------------------------------------------------------------- */
 
 .box {
+
     border:1px solid black;
     padding: 1rem;
     /*posso cambiare l'ordine di rendering dei figli */
@@ -93,3 +94,52 @@ la proprietà align-self  */
 
 /*flex-shrink fa l'opposto, cioè stringe l'elemento */
 
+
+
+/* -------------------------------------------------------------------------- */
+/*                            ESEMPIO HERO SECTION                            */
+/* -------------------------------------------------------------------------- */
+
+.heroSection {
+    height: 100vh;
+
+    background-image: url('https://source.unsplash.com/1920x1080/?drinks');
+
+    /*sfrutto flexbox per centrare in orizzontale e verticale un contenuto */
+    display: flex;
+
+    /*centro in orizzontale */
+    justify-content: center;
+
+    /*centro in verticale*/
+    align-items: center;
+}
+
+.heroText {
+    font-size: 3rem;
+}
+
+
+
+#flexMenu ul {/* <- gli UL dentro l'elemento con ID #flexMenu */
+
+    /*assegno flexbox a UL perché devo far allineare gli LI, che sono suoi diretti discendenti */
+    display: flex;
+
+    /*elimino i pallini */
+    list-style-type: none;
+
+    /*aumento la distanza tra gli elementi con la proprietà GAP */
+
+    gap: 1rem;
+    /*gap: inserisce uno spazio tra gli elementi sia su righe sia su colonne */
+    /* row-gap e column-gap servono a inserire spazi solo su righe o colonnne; */
+}
+
+#flexMenu a {
+    text-decoration: none; /*toglie il sottolineato dai link */
+}
+
+#flexMenu a {
+color:#990000;
+}
