@@ -1,0 +1,95 @@
+/* -------------------------------------------------------------------------- */
+/*                                   FLEXBOX                                  */
+/* -------------------------------------------------------------------------- */
+
+
+
+.container {
+    
+    /* -------------------------------------------------------------------------- */
+    /*                          PROPRIETA DEL CONTENITORE                         */
+    /* -------------------------------------------------------------------------- */
+    display:flex;
+    /*abilita il sistema FLEXBOX*/
+
+    flex-direction: row;
+    /*valore di default che agisce sulla RIGA (main axis)*/
+    /*possiamo anche invertire gli assi usando flex-direction:column;*/
+
+    /*il valore di default è flex-wrap: nowrap */
+    /* per mandare a capo quando finiscono lo spazio: */
+    flex-wrap: wrap;
+
+    /* -------------------------------------------------------------------------- */
+    /*                           PER POSIZIONARE I FIGLI                          */
+    /* -------------------------------------------------------------------------- */
+
+    /* ALLINEARE SULL'ASSE PRINCIPALE con justify */
+    justify-content: flex-start; /*default. Allinea all'inizio dell'asse principale*/
+
+    justify-content: center; /*allinea AL CENTRO sull'asse principale */
+
+    justify-content: flex-end; /*allinea alla fine dell'asse */
+
+    justify-content: space-between; /*allinea in modo che tra gli elementi ci sia lo stesso spazio */
+    /*se voglio anche lo spazio all'inizio e alla fine:*/
+    /* justify-content: space-around; */
+
+
+
+    height: 100vh;
+    /* di default gli elementi si stretchano e si allungano per occupare lo spazio */
+
+   /*  ALLINEARE SULL'ASSE INVERSO con align */
+
+    align-items: stretch; /*valore di default */
+
+    /* se invece voglio allineare all'inizio dell'asse inverso */
+
+    align-items: flex-start;
+    
+    align-items: flex-end;
+    
+    align-items: center; /*allinea al centro sull'asse inverso */
+
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                             PROPRIETA DEI FIGLI                            */
+/* -------------------------------------------------------------------------- */
+
+.box {
+    border:1px solid black;
+    padding: 1rem;
+    /*posso cambiare l'ordine di rendering dei figli */
+
+}
+
+.last {
+    order: 1;
+    /*la proprietà order serve per cambiare l'ordine dei figli */
+    /*valori: 0 default | -1 appare prima | 1 appare dopo */
+    /* -5 -4 -3 -2 -1  0  1  2  3  4  5 */
+}
+
+.first {
+    /* se voglio spostare PRIMA devo dare un valore inferiore a 0 */
+    /*order:-1;*/
+}
+
+/* poi posso cambiare l'allineamento sul cross-axis di un elemento con 
+la proprietà align-self  */
+
+.big {
+    /* posso cambiare lo spazio occupato dai figli con la proprietà FLEX-GROW */
+    flex-grow: 1;
+    /*1= CRESCI, FIGLIO! */
+    /* occupa lo spazio che ti lasciano i tuoi fratelli */
+    /* il valore di default è flex-grow:0 */
+}
+
+/*flex-shrink fa l'opposto, cioè stringe l'elemento */
+
