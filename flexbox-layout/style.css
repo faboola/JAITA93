@@ -9,6 +9,12 @@
 }
 
 
+/* creo una classe generica "container" che mi serve per stringere gli elementi sulla pagina */
+.container {
+    max-width: 1200px;
+    margin:0 auto;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                HEADER E LOGO                               */
 /* -------------------------------------------------------------------------- */
@@ -65,10 +71,26 @@
     justify-content: center; /*al centro orizzontale */
     align-items: center; /*al centro verticale */
 
+    text-align: center; /*allinea al centro il testo dentro */
+
+    /*anche i figli di questo elemento prenderanno la regola text-align:center perché
+    è una proprietà ereditaria */
+
+
+
 
 }
 
 
+/* -------------------------------------------------------------------------- */
+/*                                   SERVIZI                                  */
+/* -------------------------------------------------------------------------- */
+
+.servBox {
+    display: flex;
+    align-items:center;
+    column-gap: 1rem; /*spazio tra le colonne */
+}
 
 
 
