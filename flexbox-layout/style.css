@@ -1,0 +1,22 @@
+* {
+    /*selettore "universale" che indica TUTTI gli elementi sulla pagina*/
+
+    box-sizing:  border-box;
+    /* in questo modo il PADDING non fa più allargare l'elemento verso l'esterno */
+    /*NOTA: il box-sizing di default dei browser è content-box ma non si usa quasi mai */
+
+    /* Diamo sempre questa regola a meno che non venga già gestita dal framework (es. bootstrap)  */
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                HEADER E LOGO                               */
+/* -------------------------------------------------------------------------- */
+
+.logo img {
+    /*imposto le dimensioni del logo */
+        height: 3rem;
+        width: auto;
+}
+
+
