@@ -19,4 +19,56 @@
         width: auto;
 }
 
+.mainHeader {
+    display: flex; /*applichiamo display:flex al genitore di LOGO e MENU */
+
+    justify-content: space-between;
+    /* affianca sull'asse principale e dispone ai lati opposti*/
+
+    align-items: center;
+    /* allineo al centro sull'asse verticale */
+
+
+}
+
+.mainMenu ul {
+    list-style-type:none;
+    margin: 0;
+
+    display: flex;
+
+    gap: 1.5rem;
+    /*aggiunge uno spazio vuoto tra gli elementi figli */
+
+
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                            HERO E CALL TO ACTION                           */
+/* -------------------------------------------------------------------------- */
+
+
+.hero {
+
+
+    background-image:url('https://source.unsplash.com/1920x1080?beach');
+
+    /*imposto l'altezza della hero section */
+
+    height:100vh; /*alto come tutto il viewport */
+
+    /*posiziono il div con la call to action */
+
+    display: flex;
+
+    justify-content: center; /*al centro orizzontale */
+    align-items: center; /*al centro verticale */
+
+
+}
+
+
+
+
 
