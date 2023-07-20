@@ -1,0 +1,55 @@
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: chartreuse;
+}
+
+.box {
+    background: #ffcc00;
+    width: 100%;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- */
+
+/* BREAKPOINTS TIPICI:
+<576px: schermi molto piccoli
+>576: schermi piccoli (la maggior parte degli smartphone)
+>768px: schermi medi (tablet)
+>992: schermi grandi
+>1200: schermi molto grandi
+>1400: schermi ancora più grandi
+>1800: troppo grande, riduci quella maledetta finestra! */
+
+@media screen and (min-width:992px) {
+
+    /*tutte le regole per questo range di dimensioni*/
+
+    body {
+       
+        background-color: red;
+        /*questa regola sovrascrive la precedente */
+        
+    }
+
+    .box {
+        width: 50%;
+    }
+
+
+}
+
+/* ESEMPIO DI MEDIA QUERY CHE DEFINISCE LE REGOLE IN BASE ALL'ORIENTAMENTO DELLO SCHERMO: */
+
+
+@media screen and (orientation: portrait) {
+    /*landscape: orizzontale | portrait: verticale */
+
+    body {
+        background: rgb(223, 106, 255);
+    }
+
+}
