@@ -1,0 +1,35 @@
+/* -------------------------------------------------------------------------- */
+/*            STILI PER TUTTI GLI SCHERMI A PARTIRE DAI PIU PICCOLI           */
+/* -------------------------------------------------------------------------- */
+
+body {
+    font-family: 'Dosis', sans-serif;
+    background:#fcffe8;
+    color:#222;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+.logo img {
+    height:3rem;
+    width: auto;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* SEZIONE HERO */
+
+.hero {
+    
+}
+
