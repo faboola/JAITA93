@@ -8,6 +8,10 @@
     /* Diamo sempre questa regola a meno che non venga già gestita dal framework (es. bootstrap)  */
 }
 
+a {
+    text-decoration: none; /*tolgo sottolineato dai link */
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
