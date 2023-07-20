@@ -8,11 +8,25 @@
     /* Diamo sempre questa regola a meno che non venga già gestita dal framework (es. bootstrap)  */
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+img {
+    /*rendo fluide TUTTE le immagini */
+     /*l'immagine diventa fluida e non esce dal contenitore anche se la sua 
+    dimensione intrinseca è più grande */
+    max-width: 100%;
+    height:auto; 
+}
+
 
 /* creo una classe generica "container" che mi serve per stringere gli elementi sulla pagina */
 .container {
+
     max-width: 1200px;
     margin:0 auto;
+
 }
 
 /* -------------------------------------------------------------------------- */
@@ -60,8 +74,12 @@
 
     background-image:url('https://source.unsplash.com/1920x1080?beach');
 
-    /*imposto l'altezza della hero section */
+    /*faccio in modo che l'immagine si adatti al contenitore */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 
+    /*imposto l'altezza della hero section */
     height:100vh; /*alto come tutto il viewport */
 
     /*posiziono il div con la call to action */
@@ -77,8 +95,6 @@
     è una proprietà ereditaria */
 
 
-
-
 }
 
 
@@ -86,11 +102,95 @@
 /*                                   SERVIZI                                  */
 /* -------------------------------------------------------------------------- */
 
+section.servizi { /*con questo selettore specifico che le due condizioni devono verificarsi assieme.
+    L'elemento deve essere sia una tag SECTION, sia avere la classe .servizi. 
+    Qua non è strettamente necessario, bastava scrivere .servizi*/
+
+    padding-top: 3rem;
+}
+
 .servBox {
     display: flex;
     align-items:center;
     column-gap: 1rem; /*spazio tra le colonne */
+
+    padding-bottom: 3rem;
+}
+
+.servImage {
+    width: 33.33%;
 }
 
 
 
+.servText {
+    width: 66.66%;
+}
+
+.servBox:nth-of-type(even) .servImage {
+    /*seleziono tutti gli elementi .servImage dentro gli elementi .servBox di numero PARI.*/
+
+    order:1;
+
+ /* altre pseudoclassi simili sono :last-of-type (seleziona l'ultimo) e :first-of-type (seleziona il primo) */
+
+}
+
+/*se voglio faccio lo stesso con i .servText dentro i .servBox pari e allineo a destra il testo */
+.servBox:nth-of-type(even) .servText {
+    text-align: right;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   GALLERY                                  */
+/* -------------------------------------------------------------------------- */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /*vai a capo quando finisci lo spazio */
+
+   
+
+}
+
+.galleryItem { /*imposto la larghezza per aver 4 colonne */
+
+    width: 25%;
+    /* width: calc(25% - 0.75rem); */
+
+    padding:0.5rem;
+
+}
+
+.galleryItem img {
+    /*per eliminare lo spazio indesiderato sotto le immagini, trasformo le immagini in elemento blocco */
+    display: block;
+}
+
+ /*se voglio usare GAP: */
+
+  .gallery {
+    gap:1rem; /*distanzia tutti gli elementi di 1 rem */
+  }
+
+  .galleryItem {
+    padding: 0; /*non mi serve il padding */
+
+    width:calc(25% - 0.75rem);
+    /*NOTA: calc vuole SEMPRE lo spazio tra i due elementi e il segno */
+    /* Perché 0.75 REM? Perché usando il GAP di 1rem su 4 colonne, abbiamo creato 3 spazi da 1rem.
+    Questo spazio va "spalmato" sui 4 elementi (galleryItem) e quindi 3rem/4=0.75
+    */
+  }
+  
+
+
+footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    background-color: #666;
+
+    margin-top: 2rem;
+}
