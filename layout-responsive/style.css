@@ -1,6 +1,9 @@
 /* -------------------------------------------------------------------------- */
 /*            STILI PER TUTTI GLI SCHERMI A PARTIRE DAI PIU PICCOLI           */
 /* -------------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Dosis', sans-serif;
@@ -8,12 +11,18 @@ body {
     color:#222;
 }
 
+
 h1 {
     font-weight: 800;
 }
 
 h2 {
     font-weight: 600;
+}
+
+img {
+    max-width:100%;
+    height: auto;
 }
 
 .logo img {
@@ -30,6 +39,104 @@ h2 {
 /* SEZIONE HERO */
 
 .hero {
-    
+    background-image: url('donut-vertical.jpg');
+
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    height:100vh;
+
+    display: flex;
+    justify-content: center;
+
+    padding:1rem;
+   
 }
 
+.cta {
+    margin-top: 10rem;
+    text-align: center;
+    color:#F90D7F;
+}
+
+
+
+/*da mobile immagini e testo nell'area servizi sono elementi blocco, quindi
+naturalmente vanno in colonna uno sotto l'altro. */
+
+/*STILI GALLERY */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.galleryItem {
+    width: 50%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                          MEDIA QUERIES SCHEMI MEDI                         */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width:640px) {
+
+    .servBox {
+        display: flex;
+        align-items: center;
+        gap:1rem;
+    }
+    .servImage, .servText {
+        width: 50%;
+    }
+
+    .galleryItem {
+        width: 33.33%;
+    }
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                        MEDIA QUERIES SCHERMI GRANDI                        */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width:992px) {
+
+    .hero {
+        background-image: url('donut-horizontal.jpg');
+
+        /*non scrivo più display:flex perché già dichiarato prima */
+
+        align-items: center;
+        justify-content: flex-end;
+
+        padding:2rem;
+       
+
+    }
+
+    .cta {
+        margin-top: 0; /*annullo il margine impostato in precedenza */
+        text-align: left;
+    }
+
+    /*SERVIZI*/
+
+    /*non serve più display:flex su .servBox perché è già valido dalla media query precedente */
+
+    .servImage {
+        width: 33%;
+
+    }
+
+    .servText {
+        width: 66%;
+    }
+
+    .galleryItem {
+        width: 25%;
+    }
+
+}
