@@ -223,6 +223,14 @@ naturalmente vanno in colonna uno sotto l'altro. */
         display: none; /*faccio sparire l'icona menu su schermi grandi */
     }
 
+    /*se il menu è aperto non nascondere mai l'icona. 
+    Questo serve per i rari casi (=lo fanno solo i dev) in cui 
+    si apre il menu con la finestra piccola, poi si allarga, e l'icona sparisce*/
+    
+    .is-mobile-open #menuIcon {
+        display: block;
+    }
+
     .hero {
         background-image: url('donut-horizontal.jpg');
 
