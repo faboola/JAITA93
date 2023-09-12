@@ -24,7 +24,7 @@
 <body>
    
 
-    <header class="mainHeader container">
+    <header id="mainHeader" class="mainHeader container">
 
         <div class="logo">
            <img src="logo-rosa.svg" alt="">
@@ -55,7 +55,9 @@
         </nav>
 
         <button id="menuIcon">
-            <img src="menuIcon.svg" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
         </button>
 
     </header>
@@ -122,6 +124,7 @@
         <section class="gallery container">
 
             <div class="galleryItem">
+
                 <img src="https://source.unsplash.com/400x400?ocean" alt="">
             </div>
 
@@ -156,12 +159,53 @@
            
         </section>
 
+
+        <section class="imgRandom container">
+
+
+            <figure>
+                <img src="https://source.unsplash.com/400x400?guitar" alt="guitar">
+
+                <figcaption>
+                    Una chitarra molto bella. 
+                </figcaption>
+            </figure>
+
+
+
+        </section>
+
     </main>
 
 
     <footer>
         © Corso JAITA93
     </footer>
+
+
+    <script>
+
+        //JS FACILE FACILE PER IL MENU
+
+        //Intercetto il click sull'elemento
+
+        document.getElementById('menuIcon').addEventListener("click",addMenuClass);
+
+        //funzione che aggiunge la classe
+
+        function addMenuClass() {
+            var header = document.getElementById('mainHeader');
+            //a ogni click, attivo o disattivo la classe:
+            header.classList.toggle('is-mobile-open');
+
+            document.documentElement.classList.toggle('noscroll');
+
+
+
+
+        }
+
+    </script>
 
 </body>
 </html>

@@ -5,10 +5,36 @@
     box-sizing: border-box;
 }
 
+html.noscroll {
+    /*serve per evitare che il documento continui a scrollare anche col menu aperto*/
+    overflow:hidden;
+}
+
 body {
     font-family: 'Dosis', sans-serif;
     background:#fcffe8;
     color:#222;
+}
+
+/*STILI PER FIGURE E DIDASCALIE */
+
+figure {
+    /*perché funzioni il position:absolute devo dare al genitore position:relative */
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+figcaption {
+    /*posiziona in modo assoluto rispetto al genitore*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background:rgba(255,255,255,0.5);
+    padding:0.5rem;
+    width: 100%;
 }
 
 
@@ -21,8 +47,16 @@ h2 {
 }
 
 img {
+    display: block;
     max-width:100%;
     height: auto;
+}
+
+/*classe container */
+.container {
+    max-width:96%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo img {
@@ -41,7 +75,53 @@ img {
 .mainMenu ul {
     list-style-type: none;
     margin: 0;
+    padding: 0;
+
+    /*faccio sparire il menu da mobile */
+    display: none;
 }
+
+.mainMenu a {
+    color:#F90D7F;
+    text-decoration: none;
+}
+
+button#menuIcon {
+    border:none;
+    background: none;
+}
+
+/* REGOLE PER MENU MOBILE APERTO/CHIUSO */
+
+.is-mobile-open nav.mainMenu {
+    position: fixed;
+
+    left:0;
+    top:51px;
+
+    width: 100%;
+
+    height: 100vh;
+
+    background: rgb(252,255,232);
+background: linear-gradient(180deg, rgba(252,255,232,1) 0%, rgba(238,177,0,1) 100%);
+
+
+}
+
+.is-mobile-open .mainMenu ul {
+    display: block;
+    text-align: center;
+}
+
+.is-mobile-open .mainMenu li {
+    padding:1rem;
+}
+
+.is-mobile-open .mainMenu a {
+    font-size: 2rem;
+}
+
 
 /* SEZIONE HERO */
 
@@ -68,6 +148,13 @@ img {
     color:#F90D7F;
 }
 
+/* STILI SEZIONI */
+
+section.servizi {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
 
 
 /*da mobile immagini e testo nell'area servizi sono elementi blocco, quindi
@@ -90,6 +177,13 @@ naturalmente vanno in colonna uno sotto l'altro. */
 
 @media screen and (min-width:640px) {
 
+    /*container su schermi medi */
+    .container {
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .servBox {
         display: flex;
         align-items: center;
@@ -111,12 +205,22 @@ naturalmente vanno in colonna uno sotto l'altro. */
 
 @media screen and (min-width:992px) {
 
+    .container {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     /* menu */
 
     .mainMenu ul {
 
         display: flex;
         gap:1rem;
+    }
+
+    #menuIcon {
+        display: none; /*faccio sparire l'icona menu su schermi grandi */
     }
 
     .hero {
@@ -138,6 +242,13 @@ naturalmente vanno in colonna uno sotto l'altro. */
     }
 
     /*SERVIZI*/
+
+    section.servizi {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    
+    
 
     /*non serve più display:flex su .servBox perché è già valido dalla media query precedente */
 
