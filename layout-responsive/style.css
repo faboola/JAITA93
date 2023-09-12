@@ -36,6 +36,13 @@ img {
     align-items: center;
 }
 
+/* MENU DI NAVIGAZIONE */
+
+.mainMenu ul {
+    list-style-type: none;
+    margin: 0;
+}
+
 /* SEZIONE HERO */
 
 .hero {
@@ -103,6 +110,14 @@ naturalmente vanno in colonna uno sotto l'altro. */
 /* -------------------------------------------------------------------------- */
 
 @media screen and (min-width:992px) {
+
+    /* menu */
+
+    .mainMenu ul {
+
+        display: flex;
+        gap:1rem;
+    }
 
     .hero {
         background-image: url('donut-horizontal.jpg');
