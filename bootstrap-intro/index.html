@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+
+
+<!-- NAVBAR CON OFFCANVAS -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <!-- la classe navbar-expand serve per impostare il breakpoint in cui il menu appare espanso e non collassato -->
+
+    <div class="container">
+      <a class="navbar-brand" href="#">Offcanvas navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3 mt-lg-0" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!-- NAVBAR CLASSICA -->
+
+
+<!-- la classe navbar-expand serve per impostare il breakpoint in cui il menu appare espanso e non collassato -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="#">LOGO!</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!--  se imposto la classe ms-auto (=margin-left: auto) al posto di me-auto (=margin-right:auto) posso
+        spostare il blocco di navigazione a destra. -->
+        <ul class="navbar-nav  ">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <!-- --------- La struttura dei dropdown deve essere sempre così: ---------- -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+         
+        </ul>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+      </div>
+    </div>
+  </nav>
+
+    <div class="container">
+        
+        <h1>Bootstrap</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, fugiat quam eos architecto unde impedit laborum similique, maxime temporibus itaque minus adipisci porro molestiae ab, ex a! Delectus, ea vitae reiciendis dolorem totam excepturi.</p>
+        <ul>
+            <li>Lorem, ipsum.</li>
+            <li>Illo, molestiae?</li>
+            <li>Enim, rem!</li>
+            <li>Totam, dolore.</li>
+            <li>Iure, repellat!</li>
+        </ul>
+        <h2>Titolo 2</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla numquam voluptatum atque quidem laudantium error soluta maxime tenetur porro incidunt odio possimus, delectus dolores hic velit laborum vitae distinctio minus sunt mollitia nam dolorem?</p>
+    </div>
+
+    
+    <!-- Per funzionare correttamente, una ROW deve sempre essere all'interno di un CONTAINER -->
+    <div class="container">
+
+        <h2>Colonne base</h2>
+
+        <div class="row mb-5">
+            <div class="col">Colonna</div>
+            <div class="col">Colonna</div>
+            <div class="col">Colonna</div>
+            <div class="col">Colonna</div>
+            <div class="col">Colonna</div>
+            <div class="col">Colonna</div>
+          
+        </div>
+
+        <!-- non serve creare un altro container, sono già dentro un div con classe .container -->
+        <h2>Colonne con dimensioni impostate</h2>
+        <!--  impostare le dimensioni delle colonne: -->
+        <div class="row">
+            <div class="col-4">Sidebar</div>
+            <div class="col-8">Main</div>
+            <!-- All'interno di ROW, quando arrivo a riempire tutte le 12 "caselle", gli elementi tornano alla "casella" 1 -->
+            <!-- Questo succede grazie alla proprietà flex:wrap della ROW -->
+            <div class="col-9">Colonna da 9</div>
+            <div class="col-3">Colonna da 3</div>
+        </div>
+
+
+        <h2>Colonne Responsive</h2>
+
+        <div class="row mb-5">
+            <div class="col-md-6 col-lg-9">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia facere harum vel illo labore ad praesentium cupiditate expedita voluptatibus, esse beatae tempore ex natus omnis culpa, magni ut deleniti recusandae iusto voluptate ab in dolorem? Vero numquam earum fuga neque amet quidem consectetur error nemo? Deleniti cumque nam quia laborum.</p>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <p>SIDEBAR</p>
+            </div>
+        </div>
+
+
+
+        <h2>Colonne nidificate</h2>
+
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <h3>Colonna 1</h3>
+
+                <div class="row">
+                    <div class="col-lg-4">Colonna nidificata</div>
+                    <div class="col-lg-4">Colonna nidificata</div>
+                    <div class="col-lg-4">Colonna nidificata</div>
+                </div>
+
+            </div>
+            <div class="col-lg-4">
+                Colonna 2
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <div class="container">
+        <h2>Modal</h2>
+
+        <p>Il "modal" è una finstra a scomparsa che si apre al click su un pulsante.</p>
+
+        <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+    Launch demo modal
+  </button>
+  
+    <!-- Modal -->
+    <!-- NOTA: rimane nascosto finché non si attiva col pulsante -->
+    <!-- non è necessario inserire il blocco del modal subito dopo il pulsante -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalTitle" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="myModalTitle">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            Hey! Sono un modal!
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+  </div>
+
+  <div class="container">
+    <h2 class="mt-5">Gallery</h2>
+
+    <div class="row my-5 gy-4">
+
+   <!--      la classe g (gutter) serve per impostare la spaziatura in un sistema righe/colonne.
+        In questo caso, gy-4 imposta il gutter (spazio) verticale alla stessa dimensione di quello orizzontale. -->
+
+        <!-- se voglio annullare TUTTI gli spazi tra le colonne, uso la classe g-0 -->
+
+        <div class="col-md-6 col-lg-3">
+            <img class="img-fluid" src="https://source.unsplash.com/700x700?cat" alt="">
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <img class="img-fluid" src="https://source.unsplash.com/700x700?mountain+lion" alt="">
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <img class="img-fluid" src="https://source.unsplash.com/700x700?tiger" alt="">
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <img class="img-fluid" src="https://source.unsplash.com/700x700?giraffe" alt="">
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <img class="img-fluid" src="https://source.unsplash.com/700x700?lizard" alt="">
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <img class="img-fluid" src="https://source.unsplash.com/700x700?mouse" alt="">
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <img class="img-fluid" src="https://source.unsplash.com/700x700?cow" alt="">
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <img class="img-fluid" src="https://source.unsplash.com/700x700?bear" alt="">
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <img class="img-fluid" src="https://source.unsplash.com/700x700?bird" alt="">
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <img class="img-fluid" src="https://source.unsplash.com/700x700?squirrel" alt="">
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <img class="img-fluid" src="https://source.unsplash.com/700x700?opossum" alt="">
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <img class="img-fluid" src="https://source.unsplash.com/700x700?dog" alt="">
+        </div>
+
+    </div>
+  </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
