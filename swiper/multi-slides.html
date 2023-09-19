@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+   
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+
+
+   
+    <title>Esempi Swiper</title>
+</head>
+<body>
+ 
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                             VERSIONE BASE:                              -->
+    <!-- ----------------------------------------------------------------------- -->
+    
+<!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img class="img-fluid" src="https://source.unsplash.com/600x400/?portugal" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="img-fluid" src="https://source.unsplash.com/600x400/?poland" alt="">
+
+      </div>
+      <div class="swiper-slide">
+        <img class="img-fluid" src="https://source.unsplash.com/600x400/?scotland" alt="">
+      </div>
+
+      <div class="swiper-slide">
+        <img class="img-fluid" src="https://source.unsplash.com/600x400/?sicily" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="img-fluid" src="https://source.unsplash.com/600x400/?italy" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="img-fluid" src="https://source.unsplash.com/600x400/?france" alt="">
+      </div>
+
+    
+    </div>
+
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+
+
+  </div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+<script>
+
+var swiper = new Swiper(".swiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      //se voglio una dissolvenza anziché l'effetto trascinamento
+      // effect: "fade",
+
+
+      // se voglio che parta e scorra da solo:
+      autoplay: {
+        delay: 2500, //intervallo in millisecondi tra una slide e l'altra
+        disableOnInteraction: false,
+      },
+
+      // Default parameters: come si comporta lo slider prima dei breakpoints
+      slidesPerView: 2,
+      spaceBetween: 10,
+      
+      // Responsive breakpoints
+
+
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        992: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+        1200: {
+          slidesPerView: 6,
+          spaceBetween: 50,
+        },
+      },
+    });
+
+</script>
+
+</body>
+</html>
