@@ -1,0 +1,50 @@
+
+@import 'variables';
+@import 'footer';
+//se importo dei parziali, mi basta indicare il percorso esatto. Non occorre _ e estensione.
+
+body {
+
+font-family: $sans-serif-font;
+color:$primary;
+}
+
+h1 {
+    font-family: $serif-font;
+    padding:$defPadding*3;
+    font-size: 3.5rem;
+}
+
+//Nidificare i selettori 
+
+#mainNav {
+    background:#999;
+
+    #mainMenu {
+        list-style-type: none;
+        display: flex;
+
+        li {
+            padding: $defPadding/4 $defPadding*2; //risultato: padding sopra e sotto di 0.25rem e sx dx di 2rem;
+
+            a {
+                display: block;
+                font-weight: bold;
+                color:$primary;
+                text-decoration: none;
+
+                &.social { //quando questo elemento ha anche associata la classe .social
+                    color:red;
+                }
+
+                &:hover { //quando questo elemento ha associato la pseudoclasse :hover. È come scrivere a:hover
+                    color:violet;
+                }
+
+
+
+            }
+        }
+
+    }
+}
