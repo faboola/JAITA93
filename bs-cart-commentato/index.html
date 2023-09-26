@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
+    ">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="mainHeader">
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+              <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="" style="height:3.5rem"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Novità</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Chi siamo</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Negozio</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Carrello</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="bi-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="bi-instagram"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="bi-twitter-x"></i></a>
+                    </li>
+                    
+                  </ul>
+                
+                </div>
+              </div>
+            </div>
+          </nav>
+
+    </header>
+
+    <main>
+       <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+
+                <div class="sectionTitle d-flex justify-content-between align-items-center">
+                    <h1 class="fs-3">Il tuo carrello</h1>
+                    <span>3 Items </span>
+                </div>
+
+                <hr>
+
+
+            <!-- SINGOLA VOCE CARRELLO -->
+            <div class="cartItem">
+
+
+                <div class="row align-items-center">
+                <!-- NOTA: non serve d-flex perché ROW ha già display:flex -->
+
+
+                    <!-- IMMAGINE: 12/12 da mobile, 2/12 da desktop -->
+                    <div class="cartImg col-lg-2 mb-3 mb-lg-0">
+                    <!-- NOTA: non usiamo img-fluid perché abbiamo bisogno di allargare leggermente l'immagine da mobile per farla estendere a tutto schermo -->
+                        <img src="img/strokes.jpg" class="w-100" alt="">
+                    </div>
+
+                    <div class="cartTitle col-6 col-lg-4">
+                        <div class="text-muted">Vinile</div>
+                        <div><strong>The New Abnormal</strong></div>
+                    </div>
+
+                    <div class="cartCounter col-6 col-lg-3 d-flex justify-content-end justify-content-lg-center">
+
+                        <button class="btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="bi bi-dash-circle"></i>
+                        </button>
+
+                        <input type="number" min="0" max="99" value="1" name="qty" id="qty-1" class="form-control qtyInput">
+
+                        <button class="btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="bi bi-plus-circle"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="cartPrice col-lg-3 text-lg-end mt-3 mt-lg-0">
+
+                        €20.00
+
+                    </div>
+
+                    
+                </div>
+
+
+            </div>
+            <hr>
+            <!-- FINE ELEMENTO CARRELLO -->
+
+              <!-- SINGOLA VOCE CARRELLO -->
+              <div class="cartItem">
+
+
+                <div class="row align-items-center">
+                <!-- NOTA: non serve d-flex perché ROW ha già display:flex -->
+
+
+                    <!-- IMMAGINE: 12/12 da mobile, 2/12 da desktop -->
+                    <div class="cartImg col-lg-2 mb-3 mb-lg-0">
+                    <!-- NOTA: non usiamo img-fluid perché abbiamo bisogno di allargare leggermente l'immagine da mobile per farla estendere a tutto schermo -->
+                        <img src="img/alicia.jpg" class="w-100" alt="">
+                    </div>
+
+                    <div class="cartTitle col-6 col-lg-4">
+                        <div class="text-muted">Vinile</div>
+                        <div><strong>Alicia</strong></div>
+                    </div>
+
+                    <div class="cartCounter col-6 col-lg-3 d-flex justify-content-end justify-content-lg-center">
+
+                        <button class="btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="bi bi-dash-circle"></i>
+                        </button>
+
+                        <input type="number" min="0" max="99" value="1" name="qty" id="qty-1" class="form-control qtyInput">
+
+                        <button class="btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="bi bi-plus-circle"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="cartPrice col-lg-3 text-lg-end mt-3 mt-lg-0">
+
+                        €20.00
+
+                    </div>
+
+                    
+                </div>
+
+
+            </div>
+            <hr>
+            <!-- FINE ELEMENTO CARRELLO -->
+
+              <!-- SINGOLA VOCE CARRELLO -->
+              <div class="cartItem">
+
+
+                <div class="row align-items-center">
+                <!-- NOTA: non serve d-flex perché ROW ha già display:flex -->
+
+
+                    <!-- IMMAGINE: 12/12 da mobile, 2/12 da desktop -->
+                    <div class="cartImg col-lg-2 mb-3 mb-lg-0">
+                    <!-- NOTA: non usiamo img-fluid perché abbiamo bisogno di allargare leggermente l'immagine da mobile per farla estendere a tutto schermo -->
+                        <img src="img/radiohead.jpg" class="w-100" alt="">
+                    </div>
+
+                    <div class="cartTitle col-6 col-lg-4">
+                        <div class="text-muted">Vinile</div>
+                        <div><strong>Ok Computer</strong></div>
+                    </div>
+
+                    <div class="cartCounter col-6 col-lg-3 d-flex justify-content-end justify-content-lg-center">
+
+                        <button class="btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="bi bi-dash-circle"></i>
+                        </button>
+
+                        <input type="number" min="0" max="99" value="1" name="qty" id="qty-1" class="form-control qtyInput">
+
+                        <button class="btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="bi bi-plus-circle"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="cartPrice col-lg-3 text-lg-end mt-3 mt-lg-0">
+
+                        €20.00
+
+                    </div>
+
+                    
+                </div>
+
+
+            </div>
+            <hr>
+            <!-- FINE ELEMENTO CARRELLO -->
+
+            
+
+
+            </div> 
+            <!-- FINE COLONNA DA OTTO CON CARRELLO! -->
+            <div class="col-lg-4">
+                <div class="summaryHeader d-flex">
+                    <!-- NOTA: fs-1: stessa dimensione font di H1 -->
+                    <div class="fs-3 mt-4 mt-lg-0">Riepilogo ordine</div>
+                </div>
+
+                <hr>
+
+                <div class="summary d-flex justify-content-between mb-3">
+                    <div>OGGETTI: <span class="badge text-bg-primary">3</span></div>
+                    <div>150€</div>
+                </div>
+
+
+                <div class="sidebarForm">
+                    <label for="spedizione" class="form-label">Scegli il metodo di spedizione</label>
+                    <select name="spedizione" id="spedizione" class="form-select">
+                        <option value="standard">Standard - €6.99</option>
+                        <option value="rapida">Rapida - €9.99</option>
+                        <option value="iperspazio">Iperspazio - €99.99</option>
+                    </select>
+
+
+                <div class="formElement my-3">
+                    <label for="sconto" class="form-label">Codice sconto</label>
+                    <input type="text" name="sconto" id="sconto" class="form-control" placeholder="Inserisci codice">
+                    <div class="form-text">
+                        Vuoi sapere come ottenere un codice sconto perché sei povero come la m***a? <a href="#">Scrivici!</a>
+                    </div>
+                </div>
+
+                <hr class="mt-5">
+
+                <div class="cartTotal d-flex justify-content-between">
+                    <div>TOTALE</div>
+                    <div id="totalPrice">€125</div>
+                </div>
+
+                <div class="cartAction mt-3">
+                    <button class="btn btn-primary w-100">
+
+                        <i class="bi bi-check"></i> 
+
+                        Acquista
+                    </button>
+                </div>
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+            <!-- fine colonna riepilogo ordine -->
+
+        </div>
+       </div> 
+    </main>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
