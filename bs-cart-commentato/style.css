@@ -15,3 +15,18 @@ input[type=number] {
     max-width: 3rem;
     text-align: center;
 }
+
+
+.navbar-brand svg{
+height:3.5rem;
+}
+
+.navbar-brand svg .logoVinyl {
+    fill:#ddd;
+}
+
+/* CAMBIO COLORE AL LOGO COL TEMA CHIARO */
+/* NOTA: funziona solo se l'immagine SVG è incorporata nel codice e non collegata come img */
+html[data-bs-theme="light"] .logoVinyl{
+fill:#005c83;
+}
