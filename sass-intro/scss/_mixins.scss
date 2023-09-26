@@ -1,0 +1,36 @@
+/* -------------------------------------------------------------------------- */
+/*                                   MIXINS                                   */
+/* -------------------------------------------------------------------------- */
+
+@mixin myGradient($from:#000000, $to:#ffffff, $dir:0deg) {
+//questo mixin richiede 3 parametri: colore di partenza, colore di arrivo, direzione.
+//posso dichiarare i default quando definisco il mixin
+
+ background:$from;
+ background: linear-gradient($dir, $from 0%, $to 100%);
+
+}
+
+@mixin myButton($bgColor:#fff, $textColor:#222, $outline:false) {
+    background: $bgColor;
+    padding:0.5rem 1.5rem;
+    text-transform: uppercase; //tutto maiuscolo
+    text-decoration: none;
+    border-radius: 10px;
+    color:$textColor;
+
+    &:hover {
+        background: darken($bgColor,5%); //scurisce il colore di partenza 
+    }
+
+    @if $outline==true {
+        background: transparent;
+        border:1px solid $bgColor;
+
+        &:hover {
+            background: transparentize($bgColor,0.5);
+        }
+        
+    }
+}
+
