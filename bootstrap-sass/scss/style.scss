@@ -188,10 +188,42 @@ $theme-colors: (
 
 .mainContent {
     @include make-col-ready();
-    @include make-col(8);
+  
+    @include media-breakpoint-up(md) {
+        @include make-col(9);
+    }
+
+    @include media-breakpoint-up(lg) { 
+        @include make-col(8);
+    }
+
+    
 }
 
 .sidebar {
     @include make-col-ready();
-    @include make-col(4);
+
+    @include media-breakpoint-up(md) { 
+        @include make-col(3);
+      }
+
+    @include media-breakpoint-up(lg) { 
+        @include make-col(4);
+    }
 }
+
+footer {
+    
+    background: $green;
+
+    @include media-breakpoint-up(lg) { 
+     background: shade-color($barbie,20%); //crea una versione più scura
+    }
+
+
+}
+
+
+
+
+
