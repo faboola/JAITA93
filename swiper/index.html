@@ -18,7 +18,14 @@
     <title>Esempi Swiper</title>
 </head>
 <body>
- 
+  <!-- <picture>
+
+    <source srcset="slide-horiz.jpg" media="(min-width:992px)" >
+
+    <img src="slide-vert.jpg" alt="matite">
+
+  </picture> -->
+
     <!-- ----------------------------------------------------------------------- -->
     <!--                             VERSIONE BASE:                              -->
     <!-- ----------------------------------------------------------------------- -->
@@ -29,8 +36,29 @@
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide">
-        <img class="img-fluid" src="https://source.unsplash.com/1920x900/?portugal" alt="">
+
+        <picture>
+
+          <!-- PER CARICARE IMMAGINI DIVERSE A SECONDA DELLO SCHERMO -->
+
+          <!-- IMMAGINI DIVERSE PER OGNI DIMENSIONE SCHERMO -->
+          <source srcset="slide-horiz.jpg" media="(min-width:992px)" >
+          
+          <!-- per inserire dimensioni intermedie: 
+          <source srcset="slide-horiz-2.jpg" media="(min-width:640px)" > -->
+
+
+
+          <!-- IN FONDO L'IMMAGINE PER SCHERMI PICCOLI (default) CON TAG IMG -->
+          <img class="w-100" src="slide-vert.jpg" alt="matite">
+
+        </picture>
+
+        <!-- <img class="img-fluid" src="https://source.unsplash.com/1920x900/?portugal" alt=""> -->
+
+
       </div>
+      
       <div class="swiper-slide">
         <img class="img-fluid" src="https://source.unsplash.com/1920x900/?poland" alt="">
 
