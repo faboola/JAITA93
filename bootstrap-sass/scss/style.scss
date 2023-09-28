@@ -1,0 +1,197 @@
+
+
+//Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+/* -------------------------------------------------------------------------- */
+/*                          OVERRIDE DELLE VARIABILI                          */
+/* -------------------------------------------------------------------------- */
+
+// scss-docs-start gray-color-variables
+$white:    #fefefe;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+// scss-docs-start color-variables
+$blue:    #1d72f1;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #198754;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+// scss-docs-end color-variables
+
+$barbie : #f78eff;
+
+//COLORI DI DEFAULT
+$primary:       $purple;
+$secondary:     $gray-600;
+
+//sfondo body e colore testo
+$body-color:                $gray-900;
+$body-bg:                   $gray-100;
+
+// scss-docs-start theme-colors-map
+//per usare i MIEI colori custom nelle classi:
+
+
+
+//unità di misura base da cui bootstrap calcola margini e padding
+
+$spacer: 1rem;
+
+// per aggiungere o modificare classi di spacing
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+
+  //se voglio aggiungere ulteriori classi di spacing, tipo mb-6
+  6: $spacer * 6
+
+);
+
+//MODIFICARE E PERSONALIZZARE I BREAKPOINT
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  //se voglio aggiungere un brekpoint:
+  xxxl: 1600px
+);
+
+
+//DIMENSIONE MASSIMA DEI CONTAINER
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  //se abbiamo creato ulteriori breakpoint aggiungiamo i valori qui:
+  xxxl : 1380px
+  //NOTA: attenzione a non allargare troppo i container perché poi il sito è poco leggibile
+);
+
+/* FONT USATO SUL PROGETTO */
+
+$font-family-sans-serif: 'Karla',sans-serif;
+
+//Dimensione base del font
+$font-size-base : 1rem;
+
+//dimensione font dei TITOLO
+$h1-font-size:                $font-size-base * 2.5; //NOTA: con SASS possiamo moltiplicare i valori delle variabili
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+
+// 4. Include any default map overrides here
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "barbie":     $barbie //barbie è il colore che abbiamo aggiunto noi
+);
+
+
+// 5. Include remainder of required parts
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/accordion";
+@import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/pagination";
+@import "../node_modules/bootstrap/scss/badge";
+@import "../node_modules/bootstrap/scss/alert";
+@import "../node_modules/bootstrap/scss/progress";
+@import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/close";
+@import "../node_modules/bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/modal";
+@import "../node_modules/bootstrap/scss/tooltip";
+@import "../node_modules/bootstrap/scss/popover";
+// @import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/spinners";
+@import "../node_modules/bootstrap/scss/offcanvas";
+@import "../node_modules/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../node_modules/bootstrap/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+/* -------------------------------------------------------------------------- */
+/*                             I MIEI STILI CUSTOM                            */
+/* -------------------------------------------------------------------------- */
+
+//creare una ROW:
+
+.pageContent {
+   
+    @include make-row();
+
+}
+
+.mainContent {
+    @include make-col-ready();
+    @include make-col(8);
+}
+
+.sidebar {
+    @include make-col-ready();
+    @include make-col(4);
+}
